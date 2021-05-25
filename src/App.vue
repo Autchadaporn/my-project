@@ -1,32 +1,41 @@
 <template>
   <div id="app">
+    <div id="header">
+       <router-link to="/">Home</router-link>
+    </div>
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/exercise_01">{{title}}</router-link> |
+      <router-link to="/exercise_02">Exercise 2</router-link> |
+      <router-link to="/exercise_03">Exercise 3</router-link>
     </div>
     <router-view/>
   </div>
 </template>
 
+<script>
+export default {
+  name: 'app',
+  data () {
+    return {
+      title: 'Exersice 1'
+    }
+  },
+  methods: {
+    onClickAdd () {
+      this.count = this.count + 1
+    }
+  }
+}
+</script>
+
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #46a2ff;
 }
 
 #nav {
   padding: 30px;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
 }
 </style>

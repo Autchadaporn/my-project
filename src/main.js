@@ -9,4 +9,5 @@ new Vue({
   router,
   store,
   render: h => h(App)
-}).$mount('#app')
+}).$mount('#app')// App คือ component ที่โหลดเป็นตัวแรก
+// อ้างถึง id="app" ใน indexedDB.html
